@@ -13,4 +13,11 @@ class SubsequenceTest {
 		assertTrue(!Subsequence.solutionOne(new int[] { 1, 2, 3, 4, 5, 6, 7 }, new int[] { 3, 2, 1 }));
 	}
 
+
+	@Test
+	void testSolutionTwo() {
+		assertTrue(Subsequence.solutionOne(new int[] { 1, 2, 3, 4, 5, 6, 7 }, new int[] { 1, 2, 3 }));
+		assertTrue(Subsequence.solutionOne(new int[] { 2, 1, 3, 4, 7, 6, 5 }, new int[] { 3, 7, 5 }));
+		assertTrue(!Subsequence.solutionOne(new int[] { 1, 2, 3, 4, 5, 6, 7 }, new int[] { 3, 2, 1 }));
+	}
 }
