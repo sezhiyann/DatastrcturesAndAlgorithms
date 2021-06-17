@@ -9,9 +9,13 @@ import com.learning.algorithms.search.BinarySearch;
 class BinarySearchTest {
 
 	@Test
-	void test() {
-		assertTrue(
-		        BinarySearch.binarySearch(new int[] {0, 1, 21, 33, 45, 45, 61, 71, 72, 73}, 33) == 3);
+	void test_1() {
+		assertEquals(3, BinarySearch.binarySearch(new int[]{0, 1, 21, 33, 45, 45, 61, 71, 72, 73}, 33));
+	}
+
+	@Test
+	void test_2() {
+		assertEquals(-1, BinarySearch.binarySearch(new int[]{0, 1, 21, 33, 45, 45, 61, 71, 72, 73}, 31));
 	}
 
 }

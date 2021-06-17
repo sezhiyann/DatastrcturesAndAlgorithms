@@ -1,4 +1,4 @@
-package com.learning.datastructure;
+package com.learning.datastructure.arrays;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
