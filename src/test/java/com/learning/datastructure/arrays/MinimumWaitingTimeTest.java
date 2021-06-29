@@ -13,6 +13,13 @@ class MinimumWaitingTimeTest {
 
     @Test
     void minimumWaitingTime_2() {
-        assertEquals(11, MinimumWaitingTime.get(new int[]{1,4,5}));
+        assertEquals(6, MinimumWaitingTime.get(new int[]{1, 4, 5}));
     }
+
+    @Test
+    void minimumWaitingTime_3() {
+        assertEquals(10, MinimumWaitingTime.get(new int[]{17, 4, 3}));
+    }
+
+
 }
