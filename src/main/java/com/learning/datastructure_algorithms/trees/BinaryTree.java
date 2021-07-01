@@ -1,7 +1,7 @@
 package com.learning.datastructure_algorithms.trees;
 
 public class BinaryTree  {
-	public int value;
+	public final int value;
 	public BinaryTree left;
 	public BinaryTree right;
 

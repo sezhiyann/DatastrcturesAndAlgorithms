@@ -64,7 +64,7 @@ public class CompetitionWinner {
 				totalScore += scores.get(winner);
 			}
 			scores.put(winner, totalScore);
-			if (highestScore == null || highestScore == winner || scores.get(highestScore) < totalScore) {
+			if (highestScore == null || highestScore.equals(winner) || scores.get(highestScore) < totalScore) {
 				highestScore = winner;
 			}
 		}

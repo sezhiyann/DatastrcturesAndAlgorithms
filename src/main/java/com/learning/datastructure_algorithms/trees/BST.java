@@ -66,6 +66,7 @@ public class BST {
         this.value = initValue;
     }
 
+    @SuppressWarnings("ConstantConditions")
     public BST insert(int value) {
         BST node = this;
         BST newTree = new BST(value);
@@ -244,13 +245,10 @@ public class BST {
             return false;
         }
 
-        if (tree.left != null && !isValid(tree.left, minValue, tree.value)) {
+        if (!isValid(tree.left, minValue, tree.value)) {
             return false;
         }
 
-        if (tree.right != null && !isValid(tree.right, tree.value, maxValue)) {
-            return false;
-        }
-        return true;
+        return isValid(tree.right, tree.value, maxValue);
     }
 }

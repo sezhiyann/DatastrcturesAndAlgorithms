@@ -1,5 +1,6 @@
 package com.learning.datastructure_algorithms.arrays;
 public class ShiftingOperators {
+    @SuppressWarnings("ConstantConditions")
     public static void main(String[] args) {
         int i = 1;
         System.out.println("i " + i);

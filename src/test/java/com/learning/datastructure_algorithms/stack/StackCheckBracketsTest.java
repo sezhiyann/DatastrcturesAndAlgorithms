@@ -7,8 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class StackCheckBracketsTest {
 
     @Test
-    void checkCorrectness_1() {
+    void invalid() {
         String[] brackets = new String[]{"[", "{", "{", "]"};
+        assertFalse(StackCheckBrackets.checkCorrectness(brackets));
+    }
+
+    @Test
+    void valid() {
+        String[] brackets = new String[]{"[", "{", "}", "]"};
         assertTrue(StackCheckBrackets.checkCorrectness(brackets));
     }
 }

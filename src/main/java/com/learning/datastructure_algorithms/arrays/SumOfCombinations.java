@@ -24,8 +24,9 @@ public class SumOfCombinations {
     // input 65, 35, 45, 95 combinations are
     // 65 * 35,45,95
     // 65,35 * 45,95
+    @SuppressWarnings("CollectionAddAllCanBeReplacedWithConstructor")
     public static List<List<Integer>> combinations(List<Integer> numbers, List<Integer> remaining, int sum, int combo,
-            int curCombo) {
+                                                   int curCombo) {
         List<List<Integer>> combos = new ArrayList<>();
         if (!numbers.isEmpty() && isSumEqualTo(numbers, sum) && curCombo <= combo) {
             combos.add(numbers);

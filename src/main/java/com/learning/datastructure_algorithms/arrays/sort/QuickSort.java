@@ -33,19 +33,18 @@ public class QuickSort {
 		if (startIdx >= endIdx) {
 			return;
 		}
-		int pointer = startIdx;
 		int leftP = startIdx + 1;
 		int rightP = endIdx;
 		while (rightP >= leftP) {
-			if (array[leftP] > array[pointer] && array[rightP] < array[pointer]) {
+			if (array[leftP] > array[startIdx] && array[rightP] < array[startIdx]) {
 				Utils.swap(array, leftP, rightP);
-			} else if (array[leftP] <= array[pointer]) {
+			} else if (array[leftP] <= array[startIdx]) {
 				leftP++;
-			} else if (array[rightP] >= array[pointer]) {
+			} else if (array[rightP] >= array[startIdx]) {
 				rightP--;
 			}
 		}
-		Utils.swap(array, pointer, rightP);
+		Utils.swap(array, startIdx, rightP);
 		// check which sublist is small to reduce time complexity.
 		if (rightP - 1 - startIdx < endIdx - rightP + 1) {
 			sort(array, startIdx, rightP - 1);

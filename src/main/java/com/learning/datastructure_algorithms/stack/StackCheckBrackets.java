@@ -8,26 +8,21 @@ public class StackCheckBrackets {
             return true;
         }
         Stack<String> stack = new Stack<>();
-        for (int i = 0; i < brackets.length; i++) {
-            String current = brackets[i];
+        for (String current : brackets) {
             System.out.print(" " + current);
             if (stack.isEmpty()) {
-                stack.push(brackets[i]);
+                stack.push(current);
             } else {
                 String prev = stack.peek();
                 String reverse = getInverseBracket(prev);
-                if (current == reverse) {
+                if (current.equals(reverse)) {
                     stack.pop();
                 } else {
                     stack.push(current);
                 }
             }
         }
-        if (!stack.isEmpty()) {
-            return false;
-        } else {
-            return true;
-        }
+        return stack.isEmpty();
     }
 
     private static String getInverseBracket(String bracket) {

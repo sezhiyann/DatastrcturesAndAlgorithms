@@ -32,10 +32,8 @@ public class Subsequence {
         while (mainIdx < main.length && subIdx < sub.length) {
             if (main[mainIdx] == sub[subIdx]) {
                 subIdx++;
-                mainIdx++;
-            } else {
-                mainIdx++;
             }
+            mainIdx++;
         }
         return subIdx == sub.length;
     }
@@ -43,9 +41,9 @@ public class Subsequence {
 
     public static boolean solutionTwo(int[] main, int[] sub) {
         int counter = 0;
-        for (int i = 0; i < sub.length; i++) {
-            for (int j = 0; j < main.length; j++) {
-                if (sub[i] == main[j]) {
+        for (int k : sub) {
+            for (int i : main) {
+                if (k == i) {
                     counter++;
                     break;
                 }

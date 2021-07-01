@@ -3,7 +3,7 @@ package com.learning.datastructure_algorithms.trees;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 class SumOfBranchesTest {
@@ -22,7 +22,7 @@ class SumOfBranchesTest {
         root.right = new BinaryTree(3);
         root.right.left = new BinaryTree(6);
         root.right.right = new BinaryTree(7);
-        List<Integer> expectedSums = Arrays.asList();
+        List<Integer> expectedSums = new ArrayList<>();
         List<Integer> actualSums = SumOfBranches.sum(root);
         Assertions.assertArrayEquals(new Integer[]{15, 16, 18, 10, 11}, actualSums.toArray());
     }

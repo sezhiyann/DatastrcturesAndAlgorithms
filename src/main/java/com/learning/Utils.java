@@ -2,8 +2,6 @@ package com.learning;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 
 public final class Utils {
 
@@ -35,14 +33,14 @@ public final class Utils {
         if (isEmpty(array)) {
             return;
         }
-        for (int i = 0; i < Math.floor(array.length / 2); i++) {
+        for (int i = 0; i < Math.floor((double) array.length / 2); i++) {
             int swapIdx = array.length - 1 - i;
             swap(array, i, swapIdx);
         }
     }
 
     public static void swap(int[] array, int firstIdx, int secondIdx) {
-        if (array.length == 0 || firstIdx < 0 || firstIdx > array.length - 1 || secondIdx < 0
+        if (firstIdx < 0 || firstIdx > array.length - 1 || secondIdx < 0
                 || secondIdx > array.length - 1) {
             return;
         }
@@ -58,7 +56,6 @@ public final class Utils {
     public static boolean isEmpty(Collection<?> collection) {
         return collection == null || collection.isEmpty();
     }
-
 
 
     public static boolean compare(int[] arr1, int[] arr2) {
@@ -78,7 +75,7 @@ public final class Utils {
             return false;
         }
         for (int i = 0; i < arr1.length; i++) {
-            if (arr1[i] != arr2[i]) {
+            if (arr1[i] != null && !arr1[i].equals(arr2[i])) {
                 return false;
             }
         }

@@ -31,7 +31,7 @@ package com.learning.datastructure_algorithms.trees;
 
 public class ClosestNumberInTheTree {
 
-	// assumption there will be atleast one
+	// assumption there will be at least one
 	//TODO: test cases
 	public static int closesNumberInTheTree(BST root, int target) {
 		int closest = root.value;

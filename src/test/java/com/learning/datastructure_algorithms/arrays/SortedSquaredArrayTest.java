@@ -12,7 +12,7 @@ class SortedSquaredArrayTest {
 		int[] expected = new int[] { 1, 4, 9, 25, 36, 64, 81 };
 		int[] actual = SortedSquaredArray.sortedSquaredArray_Sol1(input);
 		for (int i = 0; i < expected.length; i++) {
-			assertTrue(expected[i] == actual[i]);
+			assertEquals(expected[i], actual[i]);
 		}
 	}
 
@@ -22,7 +22,7 @@ class SortedSquaredArrayTest {
 		int[] expected = new int[] { 1, 4, 9, 25, 36, 64, 64, 81, 100 };
 		int[] actual = SortedSquaredArray.sortedSquaredArray_Sol1(input);
 		for (int i = 0; i < expected.length; i++) {
-			assertTrue(expected[i] == actual[i]);
+			assertEquals(expected[i], actual[i]);
 		}
 	}
 
@@ -32,7 +32,7 @@ class SortedSquaredArrayTest {
 		int[] expected = new int[] { 1, 4, 9, 25, 36, 64, 81 };
 		int[] actual = SortedSquaredArray.sortedSquaredArray_Sol2(input);
 		for (int i = 0; i < expected.length; i++) {
-			assertTrue(expected[i] == actual[i]);
+			assertEquals(expected[i], actual[i]);
 		}
 	}
 
@@ -42,7 +42,7 @@ class SortedSquaredArrayTest {
 		int[] expected = new int[] { 1, 4, 9, 25, 36, 64, 64, 81, 100 };
 		int[] actual = SortedSquaredArray.sortedSquaredArray_Sol2(input);
 		for (int i = 0; i < expected.length; i++) {
-			assertTrue(expected[i] == actual[i]);
+			assertEquals(expected[i], actual[i]);
 		}
 	}
 }

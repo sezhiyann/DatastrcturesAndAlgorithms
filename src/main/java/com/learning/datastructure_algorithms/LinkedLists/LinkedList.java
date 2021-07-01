@@ -1,7 +1,7 @@
 package com.learning.datastructure_algorithms.LinkedLists;
 
 public class LinkedList {
-    public int value;
+    public final int value;
     public LinkedList next;
 
     public LinkedList(int value) {

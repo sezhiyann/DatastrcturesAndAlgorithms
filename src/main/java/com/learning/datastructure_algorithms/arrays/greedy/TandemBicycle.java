@@ -61,13 +61,12 @@ public class TandemBicycle {
         Utils.sort(redShirtSpeeds, true);
         Utils.sort(blueShirtSpeeds, !fastest);
 
-        int length = redLength > blueLength ? redLength : blueLength;
         int sum = 0;
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < redLength; i++) {
             int red = redShirtSpeeds[i];
             int blue = blueShirtSpeeds[i];
             //max of the speeds will be speed of the bicycle.
-            sum += (red >= blue ? red : blue);
+            sum += Math.max(red, blue);
         }
         return sum;
     }
