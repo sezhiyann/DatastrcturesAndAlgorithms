@@ -26,6 +26,42 @@ package com.learning.datastructure_algorithms.recursions;
  * <h3>Sample Output #2</h3>
  * <pre>5 <span >// 0, 1, 1, 2, 3, 5</span>
  * </pre></div>
+ * <p>
+ * Time : O(N)
+ * Space : O(1)
  */
-public class FibnocciSeries {
+public class FibonacciSeries {
+    public static int getNthNumberByRecursion(int n) {
+        if (n <= 0) {
+            return 0;
+        } else if (n == 1) {
+            return 0;
+        } else if (n == 2) {
+            return 1;
+        }
+        return getNthNumber(n - 1) + getNthNumber(n - 2);
+    }
+
+    public static int getNthNumber(int n) {
+        if (n <= 0) {
+            return 0;
+        } else if (n == 1) {
+            return 0;
+        } else if (n == 2) {
+            return 1;
+        }
+        int series = 3;
+        int fn_1 = 0;
+        int fn_2 = 1;
+        int number;
+        do {
+            number = fn_1 + fn_2;
+            series++;
+            fn_1 = fn_2;
+            fn_2 = number;
+        } while (series <= n);
+        return number;
+    }
+
+
 }
